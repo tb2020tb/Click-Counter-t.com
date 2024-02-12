@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  <style>
+    @font-face {
+      font-family: 'Protest Strike';
+      src: url('path/to/protest-strike.woff2') format('woff2'),
+           url('path/to/protest-strike.woff') format('woff');
+    }
+    body {
+      font-family: 'Protest Strike', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    #counter {
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div id="counter">0</div>
+  <script>
+    document.addEventListener('click', function() {
+      const counter = document.getElementById('counter');
+      const currentCount = parseInt(counter.textContent, 10);
+      counter.textContent = currentCount + 1;
+    });
+  </script>
+</body>
+</html>
